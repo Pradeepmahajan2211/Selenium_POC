@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/maybatchproject.iml" filepath="$PROJECT_DIR$/.idea/maybatchproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DemoWebshop.iml" filepath="$PROJECT_DIR$/.idea/DemoWebshop.iml" />
     </modules>
   </component>
 </project>

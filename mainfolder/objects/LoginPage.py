@@ -7,41 +7,23 @@ class LoginPage:
     def __init__(self, driver):
         self.driver = driver
 
-    registerbtn = (By.XPATH, "//a[contains(text(),'Register')]")
-    genderInput = (By.NAME, "Gender")
-    fnameInput = (By.NAME, "FirstName")
-    LnameInput = (By.NAME, "LastName")
-    emailInput = (By.XPATH, "//input[@id='Email']")
-    passwordInput = (By.NAME, "Password")
-    confirmpasswordInput = (By.NAME, "ConfirmPassword")
-    submitbtninput = (By.ID, "register-button")
+    loginbtn = (By.XPATH, "//a[@href='/login']")
+    usernameInput = (By.ID, "Email")
+    passwordInput = (By.ID, "Password")
+    log_in_btn = (By.XPATH, "(//input[@type='submit'])[2]")
 
 
-    def registerbtnOption(self):
-        return self.driver.find_element(*LoginPage.registerbtn)
+    def loginbtnOption(self):
+        return self.driver.find_element(*LoginPage.loginbtn)
 
-    def genderInputOption(self):
-        return self.driver.find_element(*LoginPage.genderInput)
-
-    def fnameInputOption(self):
-        return self.driver.find_element(*LoginPage.fnameInput)
-
-    def LnameInputOption(self):
-        return self.driver.find_element(*LoginPage.LnameInput)
-
-    def emailInputOption(self):
-        return self.driver.find_element(*LoginPage.emailInput)
+    def usernameInputOption(self):
+        return self.driver.find_element(*LoginPage.usernameInput)
 
     def passwordInputOption(self):
         return self.driver.find_element(*LoginPage.passwordInput)
 
-    def confirmpasswordInputOption(self):
-        return self.driver.find_element(*LoginPage.confirmpasswordInput)
-
-    def submitbtninputOption(self):
-        return self.driver.find_element(*LoginPage.submitbtninput)
-
-
+    def log_in_btnOption(self):
+        return self.driver.find_element(*LoginPage.log_in_btn)
 
 
 

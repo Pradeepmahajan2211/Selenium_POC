@@ -17,6 +17,22 @@ class CheckoutPage:
     checktermsofservice = (By.NAME, "termsofservice")
     checkout = (By.ID, "checkout")
 
+    billingfname = (By.ID, "BillingNewAddress_FirstName")
+    billinglname = (By.ID, "BillingNewAddress_LastName")
+    billingEmail = (By.ID, "BillingNewAddress_Email")
+    billingcomp = (By.ID, "BillingNewAddress_Company")
+    billingcountry = (By.ID, "BillingNewAddress_CountryId")
+    billingcity = (By.ID, "BillingNewAddress_City")
+    billingadd1 = (By.ID, "BillingNewAddress_Address1")
+    billingZip = (By.ID, "BillingNewAddress_ZipPostalCode")
+    billingPhone = (By.ID, "BillingNewAddress_PhoneNumber")
+    continue2btn = (By.XPATH, "(//input[@title='Continue'])[2]")
+    continue3btn = (By.XPATH, "(// input[@ type='button'])[4]")
+    continue4btn = (By.XPATH, "(// input[@ type='button'])[5]")
+    continue5btn = (By.XPATH, "(// input[@ type='button'])[6]")
+    confirmbtn = (By.ID, "confirm-order-please-wait")
+
+
 
 
 
@@ -40,5 +56,49 @@ class CheckoutPage:
 
     def checkoutOption(self):
         return self.driver.find_element(*CheckoutPage.checkout)
+
+#after checkout btn
+
+    def billingfnameOption(self):
+        return self.driver.find_element(*CheckoutPage.billingfname)
+
+    def billinglnameOption(self):
+        return self.driver.find_element(*CheckoutPage.billinglname)
+
+    def billingEmailOption(self):
+        return self.driver.find_element(*CheckoutPage.billingEmail)
+
+    def billingcompOption(self):
+        return self.driver.find_element(*CheckoutPage.billingcomp)
+
+    def billingcountrypOption(self):
+        return self.driver.find_element(*CheckoutPage.billingcountry)
+
+    def billingcityOption(self):
+        return self.driver.find_element(*CheckoutPage.billingcity)
+
+    def billingadd1Option(self):
+        return self.driver.find_element(*CheckoutPage.billingadd1)
+
+    def billingZipOption(self):
+        return self.driver.find_element(*CheckoutPage.billingZip)
+
+    def billingPhoneOption(self):
+        return self.driver.find_element(*CheckoutPage.billingPhone)
+
+    def continue2btnOption(self):
+        return self.driver.find_element(*CheckoutPage.continue2btn)
+
+    def continue3btnOption(self):
+        return self.driver.find_element(*CheckoutPage.continue3btn)
+
+    def continue4btnOption(self):
+        return self.driver.find_element(*CheckoutPage.continue4btn)
+
+    def continue5btnOption(self):
+        return self.driver.find_element(*CheckoutPage.continue5btn)
+
+    def confirmbtnOption(self):
+        return self.driver.find_element(*CheckoutPage.confirmbtn)
 
 
