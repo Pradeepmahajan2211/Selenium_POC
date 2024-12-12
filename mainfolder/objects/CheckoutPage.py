@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
+import allure
 
 
-
-
+@allure.story("Checkout Page")
 class CheckoutPage:
     driver=''
 
@@ -26,11 +26,12 @@ class CheckoutPage:
     billingadd1 = (By.ID, "BillingNewAddress_Address1")
     billingZip = (By.ID, "BillingNewAddress_ZipPostalCode")
     billingPhone = (By.ID, "BillingNewAddress_PhoneNumber")
-    continue2btn = (By.XPATH, "(//input[@title='Continue'])[2]")
-    continue3btn = (By.XPATH, "(// input[@ type='button'])[4]")
-    continue4btn = (By.XPATH, "(// input[@ type='button'])[5]")
-    continue5btn = (By.XPATH, "(// input[@ type='button'])[6]")
-    confirmbtn = (By.ID, "confirm-order-please-wait")
+    continue2btn = (By.XPATH, "//input[@onclick='Billing.save()']")
+    continue3btn = (By.XPATH, "//input[@onclick='Shipping.save()']")
+    continue4btn = (By.XPATH, "(//input[@class='button-1 shipping-method-next-step-button'])[1]")
+    continue5btn = (By.XPATH, "(//input[@class='button-1 payment-method-next-step-button'])[1]")
+    continue6btn = (By.XPATH, "(// input[@class ='button-1 payment-info-next-step-button'])[1]")
+    confirmbtn = (By.XPATH, "//input[@value='Confirm']")
 
 
 
@@ -97,6 +98,9 @@ class CheckoutPage:
 
     def continue5btnOption(self):
         return self.driver.find_element(*CheckoutPage.continue5btn)
+
+    def continue6btnOption(self):
+        return self.driver.find_element(*CheckoutPage.continue6btn)
 
     def confirmbtnOption(self):
         return self.driver.find_element(*CheckoutPage.confirmbtn)

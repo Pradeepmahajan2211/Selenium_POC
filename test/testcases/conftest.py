@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-
+import allure
 driver = None
 
 
@@ -10,7 +10,7 @@ def pytest_addoption(parser):
         "--browser_name", action="store", default="chrome",
     )
 
-
+@allure.title("URL Open")
 @pytest.fixture(scope="class")
 def setup(request):
     browser = request.config.getoption("browser_name")

@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Demo/Selenium_POC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Selenium_POC" vcs="Git" />
   </component>
 </project>

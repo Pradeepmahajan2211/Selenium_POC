@@ -11,9 +11,10 @@ from mainfolder.utilities.BaseClass import BaseClass
 from selenium import webdriver
 import time
 from selenium.webdriver.support.select import Select
+import allure
 
 
-
+@allure.story("End to End Test cases")
 @pytest.mark.usefixtures("setup")
 class TestCheckout(BaseClass):
     def test_checkout(self):
@@ -123,8 +124,13 @@ class TestCheckout(BaseClass):
             logs.debug('continue5btn clicked')
             Checkout.continue5btnOption().click()
 
+            logs.debug('continue6btn clicked')
+            Checkout.continue6btnOption().click()
+
+
             logs.debug('Confirm clicked')
             Checkout.confirmbtnOption().click()
+            time.sleep(3)
 
             self.takescreenshot(self.driver)
             logs.debug('Order Placed')
