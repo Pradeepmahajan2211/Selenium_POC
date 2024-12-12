@@ -48,10 +48,10 @@ class TestCheckout(BaseClass):
             logs.debug('Click on Login')
             login.loginbtnOption().click()
 
-            logs.debug('username Entered')
+            logs.debug('Username Entered')
             login.usernameInputOption().send_keys("Mahajan123@test.com")
 
-            logs.debug('password Entered')
+            logs.debug('Password Entered')
             login.passwordInputOption().send_keys("TEst123456789@#$")
 
             logs.debug('Clicked on Login')
